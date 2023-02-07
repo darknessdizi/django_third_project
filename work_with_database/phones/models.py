@@ -7,4 +7,4 @@ class Phone(models.Model):
     image = models.FileField()
     release_date = models.DateField()
     lte_exists = models.BooleanField(default=False)
-    slug = models.SlugField(max_length = 200)
+    slug = models.SlugField(max_length = 200, unique=True, db_index=True)
