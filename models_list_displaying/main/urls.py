@@ -21,6 +21,6 @@ from books.views import books_view, books_catalog, book_instance
 urlpatterns = [
     path('', books_view, name='books'),
     path('books/', books_catalog, name='books_catalog'),
-    path('books/<slug:slug>/', book_instance, name='book_instance'),
+    path('books/<str:data>/', book_instance, name='book_instance'),
     path('admin/', admin.site.urls),
 ]
