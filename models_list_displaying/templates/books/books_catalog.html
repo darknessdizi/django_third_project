@@ -19,6 +19,14 @@
                 </div>
             {% endfor %}
         </div>
+    
+    {% if page.has_previous %}
+        <a class="button button-primary" href="/books/{{ previous_data }}"> <<{{ previous_data }}</a>
+    {% endif %}
+    
+    {% if page.has_next %}
+        <a class="button button-primary" href="/books/{{ next_date }}"> {{ next_date }}>></a>
+    {% endif %}
 
     </div>
 {% endblock %}
