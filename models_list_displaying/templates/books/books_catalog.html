@@ -10,7 +10,7 @@
 
         <div class="row">
             {% for book in books %}
-                <div class="book">
+                <div class="book col-md-4">
                     <a href="/books/{{ book.pub_date }}">
                         <h2>{{ book.name }}</h2>
                     </a>
@@ -21,11 +21,11 @@
         </div>
     
     {% if page.has_previous %}
-        <a class="button button-primary" href="/books/{{ previous_data }}"> <<{{ previous_data }}</a>
+        <a class="button button-primary col-md-4" href="/books/{{ previous_data }}"> <<{{ previous_data }}</a>
     {% endif %}
     
     {% if page.has_next %}
-        <a class="button button-primary" href="/books/{{ next_date }}"> {{ next_date }}>></a>
+        <a class="button button-primary col-md-4" href="/books/{{ next_date }}"> {{ next_date }}>></a>
     {% endif %}
 
     </div>
